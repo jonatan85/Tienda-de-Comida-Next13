@@ -1,4 +1,4 @@
-import Put from "./put";
+import Put from './Put.jsx';
 
 const cargarDatos=(id)=>{
     return fetch(`https://platos-como-te-gustan-node.vercel.app/ingredients/${id}`)

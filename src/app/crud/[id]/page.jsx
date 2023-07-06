@@ -1,4 +1,4 @@
-import CrudPut from "./CrudPut";
+import CrudPut from "./CrudPut.jsx";
 
 const cargarDatos=(id)=>{
     return fetch(`https://platos-como-te-gustan-node.vercel.app/plates/${id}`)
