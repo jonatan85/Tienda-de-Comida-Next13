@@ -1,0 +1,69 @@
+.form {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: calc(50vh - 200px);
+}
+  
+.label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+  
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #d4af37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+  
+.button:hover {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+      width: 90%;
+      margin-top: calc(50vh - 150px);
+    }
+  
+    .label {
+      font-size: 14px;
+    }
+  
+    .input {
+      font-size: 14px;
+    }
+  
+    .buttonContainer {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .button {
+      font-size: 14px;
+    }
+}
+  
