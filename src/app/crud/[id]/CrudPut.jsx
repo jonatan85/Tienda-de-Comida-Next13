@@ -3,21 +3,21 @@
 import { useState, useEffect } from 'react';
 import styles from './styles.module.css';
 
-const cargarDatos = () => {
-  return fetch('https://platos-como-te-gustan-node.vercel.app/ingredients', { cache: 'no-store' })
-    .then(res => res.json());
-};
+// const cargarDatos = () => {
+//   return fetch('https://platos-como-te-gustan-node.vercel.app/ingredients', { cache: 'no-store' })
+//     .then(res => res.json());
+// };
 
 export default function CrudPut({ datos }) {
   const [formData, setFormData] = useState(datos);
   const [ingredients, setIngredients] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    cargarDatos()
-      .then(data => setIngredients(data))
-      .catch(error => console.error('Error al cargar los datos de los ingredientes:', error));
-  }, []);
+  // useEffect(() => {
+  //   cargarDatos()
+  //     .then(data => setIngredients(data))
+  //     .catch(error => console.error('Error al cargar los datos de los ingredientes:', error));
+  // }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -121,7 +121,7 @@ export default function CrudPut({ datos }) {
           <input type="text" id="search" placeholder="Buscar..." value={searchTerm} onChange={handleSearchTermChange} className={`${styles.input} ${styles.myCustomInput}`} />
         </div>
 
-        <div className={styles.ingredientsContainer}>
+        {/* <div className={styles.ingredientsContainer}>
           <h3>Ingredientes:</h3>
           <div className={styles.ingredientsList}>
             {filteredIngredients.map((ingredient) => (
@@ -140,9 +140,9 @@ export default function CrudPut({ datos }) {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {formData.ingredients.length > 0 && (
+        {/* {formData.ingredients.length > 0 && (
           <div className={styles.selectedIngredientsContainer}>
             <h3>Ingredientes seleccionados:</h3>
             <ul>
@@ -151,7 +151,7 @@ export default function CrudPut({ datos }) {
               ))}
             </ul>
           </div>
-        )}
+        )} */}
 
         <div className={styles.buttonContainer}>
           <button className={styles.button} type="submit">Guardar</button>
