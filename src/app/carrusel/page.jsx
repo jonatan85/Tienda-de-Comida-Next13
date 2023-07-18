@@ -1,39 +1,47 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React, { useEffect, useRef } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import styles from './carrusel.module.css';
 
-import pizzaImage from '../../public/img/ricota.jpg';
-// import imagen3 from './img/imagen3.jpg';
-// import imagen4 from './img/imagen4.jpg';
-// import imagen5 from './img/imagen5.jpg';
+import imagen1 from '../../public/img/bueno.jpeg';
+import imagen2 from '../../public/img/bodegon.jpeg';
+import imagen3 from '../../public/img/pizza.jpeg';
+
 
 export default function Carrusel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const carouselImages = [pizzaImage];
+  const carouselRef = useRef(null);
+  const carouselImages = [imagen1, imagen2, imagen3];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+      if (carouselRef.current) {
+        carouselRef.current.slickNext();
+      }
     }, 3000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [carouselImages.length]);
+  }, []);
+
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+  };
 
   return (
     <div className={styles.carouselContainer}>
-      <Carousel
-        showThumbs={false}
-        autoPlay={true}
-        infiniteLoop={true}
-        interval={3000}
-        selectedItem={currentSlide}
-        onChange={(slide) => setCurrentSlide(slide)}
-      >
+      <Slider {...settings} ref={carouselRef}>
         {carouselImages.map((image, index) => (
           <div key={index} className={styles.carouselItem}>
             <img
@@ -45,8 +53,7 @@ export default function Carrusel() {
             />
           </div>
         ))}
-      </Carousel>
+      </Slider>
     </div>
   );
 }
-
