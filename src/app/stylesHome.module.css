@@ -1,0 +1,30 @@
+.contenedorHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenContainer {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.parrafoContainer {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Ajusta el espacio en los cuatro lados según tus necesidades */
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+}
+
+.parrafoTexto {
+  text-align: justify;
+  max-width: 500px; /* Ajusta el ancho máximo del párrafo según tus necesidades */
+  margin: 0 auto; /* Centra horizontalmente el párrafo dentro del contenedor */
+}
+
