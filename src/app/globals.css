@@ -364,8 +364,11 @@ body {
 }
 
 .footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
   margin-top: auto;
-  background-color: #f2f2f2;
+  background-color: white;
   text-align: center;
   padding: 10px;
 }
