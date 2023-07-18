@@ -1,0 +1,33 @@
+.carouselContainer {
+    max-width: 100%;
+    overflow: hidden;
+}
+  
+.carouselItem {
+    display: flex;
+    justify-content: center;
+}
+  
+.carouselImg {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+  
+ @media (min-width: 768px) {
+    .carouselImg {
+      max-height: 600px;
+      object-fit: cover;
+    }
+}
+  
+@media (max-width: 767px) {
+    .carouselImg {
+      height: auto;
+      max-height: 300px;
+    }
+}
+  
+  
+  

@@ -1,4 +1,4 @@
-// import Carrusel from './carrusel/page';
+import Carrusel from './carrusel/page';
 import styles from './stylesHome.module.css';
 import Image from 'next/image';
 import ImagenRicota from '../public/img/ricota.jpg';
@@ -7,7 +7,7 @@ export default function Home () {
   
     return (
       <>
-      {/* <Carrusel /> */}
+      <Carrusel />
       <div className={styles.contenedorHome}>
         <div className={styles.imagenContainer}>
           <Image src={ImagenRicota} alt='imagen ricota' className={styles.imagen} />
