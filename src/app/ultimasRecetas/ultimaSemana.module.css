@@ -1,0 +1,62 @@
+.container {
+    margin-bottom: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h2 {
+    color: white;
+    margin-top: 150px;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.containerCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+}
+
+
+.card {
+    position: relative;
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.cardImg {
+    position: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to top, transparent, black);
+    mask-image: linear-gradient(to top, transparent, black);
+}
+
+.cardName {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+  
+  
+
+
+
+
+
+  
