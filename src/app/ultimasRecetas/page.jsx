@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Image from '../../components/imagen/Imagen.jsx';
+import ActiveLink from '@/components/activeLink/ActiveLink.jsx';
 
 import styles from './ultimaSemana.module.css';
 
@@ -21,7 +22,7 @@ export default function UltimasRecetas() {
     obtenerDatos();
   }, []);
 
-  const ultimasCuatroRecetas = recetas.slice(-4); // Obtener los últimos cuatro objetos
+  const ultimasCuatroRecetas = recetas.slice(-4);
 
   return (
     <>
@@ -29,11 +30,14 @@ export default function UltimasRecetas() {
         <h2>Últimas recetas de esta semana</h2>
         <div className={styles.containerCard}>
             {ultimasCuatroRecetas.map((valor) => (
-              <div className={styles.card} key={valor.id}>
+              <div className={styles.card} key={valor._id}>
                 <img className={styles.cardImg} src={valor.picture} alt={valor.name} />
                 <h3 className={styles.cardName}>{valor.name}</h3>
               </div>
           ))}
+        </div>
+        <div className={styles.boton}>
+          <ActiveLink text='Ver Todas Las Recetas' href='/platos'/>
         </div>
       </div>
     </>

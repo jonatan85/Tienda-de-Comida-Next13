@@ -20,7 +20,6 @@
     column-gap: 70px;
 }
 
-
 .card {
     position: relative;
     width: 700px;
@@ -38,25 +37,115 @@
 }
 
 .cardName {
-  position: absolute;
-  top: 80%;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0px;
-  margin: 0;
-  color: white;
-  font-size: 30px;
-  font-weight: 300;
-  margin-left: 20px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 20px;
 }
-  
-  
 
+.boton a{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: white;
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+}
 
+.boton a:hover {
+    background-color: white;
+    color: black;
+}
 
+@media (max-width: 1199px) {
+    .container h2 {
+        font-size: 45px;
+        margin-top: 120px;
+    }
 
+    .containerCard {
+        column-gap: 50px;
+    }
 
-  
+    .card {
+        width: 400px;
+        height: 300px;
+    }
+
+    .cardName {
+        font-size: 28px;
+        top: 75%;
+    }
+}
+
+@media (max-width: 991px) {
+    .container h2 {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    .containerCard {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardName {
+        font-size: 24px;
+        top: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container h2 {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    .containerCard {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardName {
+        font-size: 24px;
+        top: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h2 {
+        font-size: 30px;
+        margin-top: 80px;
+    }
+
+    .containerCard {
+        column-gap: 30px;
+    }
+
+    .cardName {
+        font-size: 20px;
+        top: 60%;
+    }
+}

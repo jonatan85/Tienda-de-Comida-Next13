@@ -51,22 +51,40 @@
     padding: 10px;
   }
 
+  .menuIcon {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
   .linksContainer {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin-right: 0;
-    padding: 10px 0;
-  }  
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .linksContainer.open {
+    max-height: 200px;
+  }
 
   .linksContainer a {
     text-decoration: none;
     font-size: 14px;
-    padding: 0;
+    padding: 10px 10px;
   }
+
   .linksContainer a:hover {
     border-bottom: none;
     background-color: white;
     color: black;
+    padding: 0;
   }
 }
