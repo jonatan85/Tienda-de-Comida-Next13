@@ -9,17 +9,20 @@ export default function Ficha({valor}) {
   
   return (
     <>
-      <div>
+    <div className={styles.cardOrigen}>
+      <Link href={`/platos/${_id}`}>
+        <div className={styles.card}>
+          <div className={styles.imagen}>
+              <Image valor={valor} /> 
+          </div>
+        </div>
         <div className={styles.nombre}>
+          <h3>
             {valor.name}
+          </h3>
         </div>
-        <div className={styles.imagen}>
-            <Image valor={valor} /> 
-        </div>
-        <div className={styles.ver}>
-            <Link href={`/platos/${_id}`}><button>Ver</button></Link>
-        </div>
-      </div>
+      </Link>
+    </div>
     </>
   )
 

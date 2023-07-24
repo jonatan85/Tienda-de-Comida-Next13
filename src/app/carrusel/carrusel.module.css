@@ -1,6 +1,7 @@
 .carouselContainer {
     max-width: 100%;
     overflow: hidden;
+    background-color: black;
 }
   
 .carouselItem {

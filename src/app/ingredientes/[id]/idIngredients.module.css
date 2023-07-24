@@ -1,68 +1,107 @@
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .detalles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.imagen img {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.nombre {
+  font-size: 40px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.descriptionContainer {
+  border-top: 1px solid black;
+  max-width: 450px;
+  padding-top: 20px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.boton {
+  padding: 8px 16px;
+  color: black;
+  background-color: white;
+  font-size: 40px;
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Estilos para pantallas más pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
   .imagen img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  
-  .nombre {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-  
-  .descriptionContainer {
-    max-width: 450px;
-    margin-top: 10px;
-    border: 1px solid #d4af37;
-    padding: 10px; 
-  }
-  
-  .description {
-    font-size: 16px;
-  }
-  
-  .botones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
   }
 
-  .botonVolver {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    color: #d4af37;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
+  .nombre {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .boton {
-    padding: 0;
-    border: none;
-    margin-top: 20px;
+    font-size: 30px;
+    padding: 6px 12px;
   }
-  
-  .botonVolver:hover {
-    background-color: #d4af37;
-    color: #fff;
+}
+
+/* Estilos para pantallas aún más pequeñas (max-width: 480px) */
+@media (max-width: 480px) {
+  .descriptionContainer {
+    max-width: 100%;
   }
-  
+
+  .nombre {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .boton {
+    font-size: 25px;
+    padding: 8px 14px;
+  }
+}

@@ -30,7 +30,7 @@ export default function UltimasRecetas() {
         <h2>Últimas recetas de esta semana</h2>
         <div className={styles.containerCard}>
             {ultimasCuatroRecetas.map((valor) => (
-              <div className={styles.card} key={valor._id}>
+              <div className={styles.card} key={valor.id}>
                 <img className={styles.cardImg} src={valor.picture} alt={valor.name} />
                 <h3 className={styles.cardName}>{valor.name}</h3>
               </div>

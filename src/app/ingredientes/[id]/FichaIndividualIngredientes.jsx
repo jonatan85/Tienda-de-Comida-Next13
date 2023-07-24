@@ -31,23 +31,24 @@ export default function FichaIndividualIngredientes({datos}) {
     return (
     <>
         <div className={styles.contenedor}>
-            <div className={styles.detalles}>
                 <div className={styles.imagen}>
                     <img src={datos.picture} alt={datos.name}/>
                 </div>
-                <div className={styles.nombre}>Nombre de el Ingrediente: {datos.name} </div>
+            <div className={styles.detalles}>
+                <div className={styles.nombre}>{datos.name} </div>
                 <div className={styles.descriptionContainer}>
                     <div className={styles.description}>Descripción: {datos.description}</div>
                 </div>
             </div>
             <div className={styles.botones}>
-                <Link href="/ingredientes" className={styles.botonVolver}>
+                <Link href="/ingredientes" className={styles.boton}>
                     Volver
                 </Link>
-                <button className={styles.botonVolver} onClick={() => handleDelete(datos._id)}>
+                <button className={styles.boton} onClick={() => handleDelete(datos._id)}>
                 Eliminar
                 </button>
                 <button className={styles.boton}>
+                Editar
                     <EditarIngredientes valor={datos} />
                 </button>
             </div>

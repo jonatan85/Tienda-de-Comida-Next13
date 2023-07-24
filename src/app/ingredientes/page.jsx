@@ -13,7 +13,7 @@ const cargarDatos = () => {
 export default function Ingredientes() {
     const [datos, setDatos] = useState([]);
     const [paginaActual, setPaginaActual] = useState(1);
-    const [elemetosPorPagina, setElementosPorPagina] = useState(9);
+    const [elemetosPorPagina, setElementosPorPagina] = useState(18);
     const [busqueda, setBusqueda] = useState("");
     
     useEffect(() => {
@@ -21,7 +21,7 @@ export default function Ingredientes() {
             const datosCargados = await cargarDatos();
             setDatos(datosCargados)
         };
-
+        
         obtenerDatos();
     },[]);
 
@@ -70,7 +70,7 @@ export default function Ingredientes() {
                 <Link href={`/ingredientes/${valor._id}`}>
                     <div className={styles.ingredients} key={indice}>
                         <img src={valor.picture} alt={valor.name} />
-                        <h3>{valor.name}</h3>
+                        <h3 className={styles.ingredientsH3}>{valor.name}</h3>
                     </div>
                 </Link>
                 </div>

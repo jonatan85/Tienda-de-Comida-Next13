@@ -7,6 +7,7 @@ import './globals.css'
 import Footer from './footer/page'
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

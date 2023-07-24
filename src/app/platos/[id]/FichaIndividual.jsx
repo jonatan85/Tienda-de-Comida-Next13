@@ -46,31 +46,30 @@ export default function FichaIndividual({datos, handleModificar}) {
     })
   }  
 
-
-
-  
     return (
       <>
       <div className={styles.contenedor}>
-        <div className={styles.detalles}>
           <div className={styles.imagen}>
             <Imagen valor={datos} />
           </div>
-          <div className={styles.nombre}>Nombre de el Plato: {datos.name}</div>
-          <div className={styles.precio}>Precio: {datos.price}</div>
-          <div className={styles.descripcionContainer}>
-            <div className={styles.descripcion}>Descripción: {datos.description}</div>
-          </div>
-          <div className={styles.ingredientes}>
-            <div className={styles.recuadroIngredientes}>
-              Ingredientes:
-              <div>
-                <Ingredients valor={datos.ingredients} />
-              </div>
+          <div className={styles.contnedorNombrePrecio}>
+            <div className={styles.nombre}>{datos.name}</div>
+            <div className={styles.contenedorPrecioTipo}>
+              <div className={styles.tipo}>Tipo de plato: {datos.type}</div>
+              <div className={styles.precio}>Precio: {datos.price}</div>
             </div>
           </div>
-
-          <div className={styles.tipo}>Tipo de plato: {datos.type}</div>
+          <div className={styles.contenedorDescripcionIngredientes}>
+            <div className={styles.descripcionContainer}>
+              <div className={styles.descripcion}>Descripción: {datos.description}</div>
+            </div>
+            <div className={styles.ingredientes}>
+                <p className={styles.ingredietesTitulo}>Ingredientes:</p>
+                <div>
+                  <Ingredients valor={datos.ingredients} />
+                </div>
+            </div>
+          </div>
           <div className={styles.botones}>
             <button className={styles.botonComprar} onClick={() => adquirir(datos)}>
               Comprar
@@ -81,12 +80,14 @@ export default function FichaIndividual({datos, handleModificar}) {
             <button className={styles.botonComprar} onClick={() => handleDelete(datos._id)}>
               Eliminar
             </button>
-            <button className={styles.boton}>
-                <EditarPlatos datos={datos} />
+            <button className={styles.botonComprar}>
+                Editar
+                <div className={styles.botonEditar}>
+                  <EditarPlatos datos={datos} />
+                </div>
             </button>
           </div>
-        </div>
-      </div>
+          </div>
     </>
     
   )

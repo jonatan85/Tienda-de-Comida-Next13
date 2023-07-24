@@ -1,28 +1,19 @@
+/* Estilos base */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
 .form {
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .form {
-    width: 100%;
-    padding: 0 10px; 
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .form {
-    width: 90%;
-  }
-}
-
-
-@media screen and (min-width: 1024px) {
-  .form {
-    width: 80%;
-  }
 }
 
 .formGroup {
@@ -34,22 +25,56 @@
   margin-bottom: 5px;
 }
 
-.input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-
+.input,
 .select {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .container h2 {
+    font-size: 30px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .input,
+  .select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .button {
+    font-size: 30px;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form {
+    width: 80%;
+  }
 }
 
 .ingredientsContainer {
@@ -87,10 +112,9 @@
   justify-content: center;
   flex-grow: 1;
   padding: 8px 16px;
-  background-color: #f9f9f9;
-  color: #d4af37;
+  background-color: white;
+  color: black;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
@@ -98,17 +122,15 @@
   word-wrap: break-word;
 }
 
-
 .customCheckboxLabel:hover {
-  background-color: #d4af37;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .ingredientCheckbox:checked + .customCheckboxLabel {
-  background-color: #d4af37;
-  color: black;
+  background-color: black;
+  color: white;
 }
-
 
 .selectedIngredientsContainer {
   margin-bottom: 20px;
@@ -133,24 +155,26 @@
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  gap: 40px;
 }
 
 .button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #f9f9f9;
-  color: #d4af37;
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #d4af37;
-  color: #fff;
+  color: black;
+  background-color: white;
 }
 
 .formbuscador {
@@ -168,6 +192,6 @@
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid black;
 }

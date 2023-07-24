@@ -15,7 +15,7 @@ export default function FiltradoPage() {
   const [datos, setDatos] = useState([]);
   const [filtro, setFiltro] = useState('todos');
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 9;
+  const pageSize = 15;
 
   useEffect(() => {
     const obtenerDatos = async () => {
@@ -48,19 +48,22 @@ export default function FiltradoPage() {
     <>
     <div className={styles.contenedorPlates}>
       <div className={styles.plates}>
-        <select className={styles.select} value={filtro} onChange={handleFiltroChange}>
-          <option value="todos">Todos</option>
-          <option value="primeros">Primeros Platos</option>
-          <option value="segundos">Segundos Platos</option>
-          <option value="guarnicion">Guarniciones</option>
-          <option value="postres">Postres</option>
-        </select>
+        <div className={styles.platesH2}>
+            <h2>Te Costará Elegir... </h2>
+        </div>
+        <div className={styles.platesSelect}>
+          <select className={styles.select} value={filtro} onChange={handleFiltroChange}>
+            <option value="todos">Todos</option>
+            <option value="primeros">Primeros Platos</option>
+            <option value="segundos">Segundos Platos</option>
+            <option value="guarnicion">Guarniciones</option>
+            <option value="postres">Postres</option>
+          </select>
+        </div>
       </div>
       <div className={styles.fichaContainer}>
         {paginatedData.map((valor, indice) => (
-          <div className={styles.ficha} key={indice}>
-            <Ficha valor={valor} />
-          </div>
+            <Ficha className={styles.ficha} key={indice} valor={valor} />
         ))}
       </div>
       <div className={styles.buttonContainer}>

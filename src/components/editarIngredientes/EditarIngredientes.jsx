@@ -7,7 +7,9 @@ export default function EditarIngredientes({valor}) {
   
     return (
     <>  
-      <Link className={styles.boton} href={`/crudIngredientes/${_id}`}>Editar</Link>
+      <Link className={styles.boton} href={`/crudIngredientes/${_id}`}>
+        %
+      </Link>
     </>
   )
 }

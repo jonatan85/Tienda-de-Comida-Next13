@@ -3,10 +3,11 @@
   justify-content: space-between;
   align-items: center;
   background-color: #000;
+  padding-top: 20px;
 }
 
 .iconContainer {
-  width: 50px;
+  width: 70px;
   margin-left: 100px;
 }
 
@@ -28,7 +29,7 @@
   color: white;
   text-decoration: none;
   margin: 0 10px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px 10px;
@@ -38,7 +39,13 @@
   border-bottom: 3px solid white;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1124px) {
+  .linksContainer a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 769px) {
   .nav {
     flex-direction: column;
     padding: 20px;
@@ -77,7 +84,7 @@
 
   .linksContainer a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     padding: 10px 10px;
   }
 

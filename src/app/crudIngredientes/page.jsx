@@ -52,20 +52,23 @@ export default function page({datos}) {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <label htmlFor="name" className={styles.label}>Nombre:</label>
-        <input type="text" id="name" name="name" value={ingredientsCreate.name} onChange={handleInputChange} className={styles.input} />
-        
-        <label htmlFor="description" className={styles.label}>Descripción:</label>
-        <input type="text" id="description" name="description" value={ingredientsCreate.description} onChange={handleInputChange} className={styles.input} />
-        
-        <label htmlFor="picture" className={styles.label}>Imagen:</label>
-        <input type="text" id="picture" name="picture" value={ingredientsCreate.picture} onChange={handleInputChange} className={styles.input} />
-        
-        <div className={styles.buttonContainer}>
-          <button type="submit" className={styles.button}>Guardar</button>
-        </div>
-      </form>
+      <div className={styles.container}>
+        <h2>Añade Ingredients</h2>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <label htmlFor="name" className={styles.label}>Nombre:</label>
+          <input type="text" id="name" name="name" value={ingredientsCreate.name} onChange={handleInputChange} className={styles.input} />
+          
+          <label htmlFor="description" className={styles.label}>Descripción:</label>
+          <input type="text" id="description" name="description" value={ingredientsCreate.description} onChange={handleInputChange} className={styles.input} />
+          
+          <label htmlFor="picture" className={styles.label}>Imagen:</label>
+          <input type="text" id="picture" name="picture" value={ingredientsCreate.picture} onChange={handleInputChange} className={styles.input} />
+          
+          <div className={styles.buttonContainer}>
+            <button type="submit" className={styles.button}>Guardar</button>
+          </div>
+        </form>
+      </div>
     </>
   )
 }

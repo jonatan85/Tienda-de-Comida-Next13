@@ -11,7 +11,7 @@ import imagen2 from '../../public/img/bodegon.jpeg';
 import imagen3 from '../../public/img/pizza.jpeg';
 
 
-export default function Carrusel() {
+export default function Carrusel() {  
   const carouselRef = useRef(null);
   const carouselImages = [imagen1, imagen2, imagen3];
 
