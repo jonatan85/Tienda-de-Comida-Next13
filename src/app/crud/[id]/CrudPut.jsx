@@ -61,7 +61,7 @@ export default function CrudPut({ datos }) {
     }
   };
 
-  const filteredIngredients = ingredients.filter(ingredient => ingredient.name.toLowerCase().includes(searchTerm.toLowerCase()));
+ 
 
   return (
     <>
@@ -106,11 +106,6 @@ export default function CrudPut({ datos }) {
               <option value="Guarniciones">Guarniciones</option>
               <option value="Postres">Postres</option>
             </select>
-          </div>
-
-          <div className={styles.formbuscador}>
-            <label htmlFor="search" className={`${styles.label} ${styles.myCustomLabel}`}>Buscar ingredientes:</label>
-            <input type="text" id="search" placeholder="Buscar..." value={searchTerm} onChange={handleSearchTermChange} className={`${styles.input} ${styles.myCustomInput}`} />
           </div>
 
           <div className={styles.buttonContainer}>
