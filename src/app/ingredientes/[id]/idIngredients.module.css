@@ -55,12 +55,17 @@
   transition: background-color 0.3s ease;
 }
 
+.botonEditar {
+  border: none;
+  background-color: white;
+}
+
 .boton:hover {
   color: white;
   background-color: black;
 }
 
-/* Estilos para pantallas más pequeñas (max-width: 768px) */
+
 @media (max-width: 768px) {
   .imagen img {
     width: 100%;
@@ -86,7 +91,6 @@
   }
 }
 
-/* Estilos para pantallas aún más pequeñas (max-width: 480px) */
 @media (max-width: 480px) {
   .descriptionContainer {
     max-width: 100%;

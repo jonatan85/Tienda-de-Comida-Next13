@@ -80,11 +80,8 @@ export default function FichaIndividual({datos, handleModificar}) {
             <button className={styles.botonComprar} onClick={() => handleDelete(datos._id)}>
               Eliminar
             </button>
-            <button className={styles.botonComprar}>
-                Editar
-                <div className={styles.botonEditar}>
+            <button className={styles.botonEditar}>
                   <EditarPlatos datos={datos} />
-                </div>
             </button>
           </div>
           </div>

@@ -106,7 +106,8 @@
 }
 
 .botonEditar {
-  padding: 0;
+  background-color: black;
+  border: none;
 }
 
 .botonComprar:hover {
@@ -161,12 +162,7 @@
     font-size: 20px;
   }
 
-  .botonEditar {
-    font-size: 20px;
-  }
-
-  .botonComprar:hover,
-  .botonEditar:hover {
+  .botonComprar:hover {
     font-weight: 500; 
   }
 }
@@ -227,13 +223,7 @@
     padding: 6px 12px; 
   }
 
-  .botonEditar {
-    font-size: 20px; 
-    padding: 6px 12px; 
-  }
-
-  .botonComprar:hover,
-  .botonEditar:hover {
+  .botonComprar:hover {
     font-weight: 500; 
   }
 }

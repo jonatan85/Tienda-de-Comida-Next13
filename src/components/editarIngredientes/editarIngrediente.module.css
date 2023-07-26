@@ -1,1 +1,29 @@
-
+.boton {
+  padding: 8px 16px;
+  color: black;
+  background-color: white;
+  font-size: 40px;
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+  
+.boton:hover {
+  color: white;
+  background-color: black;
+}
+  
+@media (max-width: 768px) {
+  .boton {
+    font-size: 30px;
+    padding: 6px 12px;
+  }
+}
+  
+@media (max-width: 480px) {
+  .boton {
+    font-size: 25px;
+    padding: 8px 14px;
+  }
+}

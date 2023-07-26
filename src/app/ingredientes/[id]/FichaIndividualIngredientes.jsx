@@ -47,8 +47,7 @@ export default function FichaIndividualIngredientes({datos}) {
                 <button className={styles.boton} onClick={() => handleDelete(datos._id)}>
                 Eliminar
                 </button>
-                <button className={styles.boton}>
-                Editar
+                <button className={styles.botonEditar}>
                     <EditarIngredientes valor={datos} />
                 </button>
             </div>

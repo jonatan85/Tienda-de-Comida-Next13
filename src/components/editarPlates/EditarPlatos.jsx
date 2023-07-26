@@ -9,7 +9,7 @@ export default function EditarPlatos({datos}) {
   return (
     <>  
         <Link className={styles.boton} href={`/crud/${_id}`}>
-        %
+        Editar
         </Link>
     </>
   )
